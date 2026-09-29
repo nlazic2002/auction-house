@@ -5,6 +5,7 @@ INSERT INTO accounts (
     email,
     phone_number,
     password_hash,
+    email_verified_at,
     last_login_at
 )
 VALUES (
@@ -14,5 +15,6 @@ VALUES (
            'ivan.horvat@gmail.com',
            '+385991234567',
            '$2a$12$C9pdRItFlr3.0FwBR.FdsOLIJrCJvLnTQ0cz07xYgxuFOmdnedKw.',
-           CURRENT_TIMESTAMP
-       );
+           NULL,
+           NULL
+);
