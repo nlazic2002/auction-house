@@ -3,16 +3,18 @@ INSERT INTO accounts (
     last_name,
     user_name,
     email,
+    role,
     phone_number,
     password_hash
 )
 VALUES (
-           'Ivan',
-           'Horvat',
-           'ivan.horvat',
-           'ivan.horvat@example.com',
+           'Admin',
+           'Admin',
+           'admin.admin',
+           'admin@example.com',
+           'admin',
            '+385911111111',
-           'dev_password_hash'
+           '$2a$12$mn6t7rsCxk2etxODWWHV7ONUgqv8t0df.iApI5wexMoSosqErvytq'
        );
 
 INSERT INTO addresses (
@@ -25,8 +27,8 @@ INSERT INTO addresses (
     country_code
 )
 VALUES (
-           (SELECT id FROM accounts WHERE user_name = 'ivan.horvat'),
-           'Ivan Horvat',
+           (SELECT id FROM accounts WHERE user_name = 'admin.admin'),
+           'Admin Admin',
            'Ilica 120',
            '10000',
            'Zagreb',
@@ -52,7 +54,7 @@ INSERT INTO auctions (
     status
 )
 VALUES (
-           (SELECT id FROM accounts WHERE user_name = 'ivan.horvat'),
+           (SELECT id FROM accounts WHERE user_name = 'admin.admin'),
            'Classic Cars Auction',
            'Auction of classic and collectible vehicles.',
            '2026-10-15 10:00:00',
@@ -87,7 +89,7 @@ INSERT INTO bids (
     amount
 )
 VALUES (
-           (SELECT id FROM accounts WHERE user_name = 'ivan.horvat'),
+           (SELECT id FROM accounts WHERE user_name = 'admin.admin'),
            (
                SELECT l.id
                FROM lots l
