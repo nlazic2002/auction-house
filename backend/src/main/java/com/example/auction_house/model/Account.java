@@ -1,7 +1,7 @@
 package com.example.auction_house.model;
 
-import com.example.auction_house.enums.AccountRole;
-import com.example.auction_house.enums.AccountStatus;
+import com.example.auction_house.enums.account.AccountRole;
+import com.example.auction_house.enums.account.AccountStatus;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.CredentialsContainer;
 import org.springframework.security.core.GrantedAuthority;
