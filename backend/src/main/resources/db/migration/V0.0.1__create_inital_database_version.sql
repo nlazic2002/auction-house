@@ -5,7 +5,6 @@ CREATE TABLE accounts (
     id BIGSERIAL PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    user_name VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
     phone_number VARCHAR(30),
     password_hash VARCHAR(255) NOT NULL,
@@ -17,9 +16,6 @@ CREATE TABLE accounts (
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP,
     anonymized_at TIMESTAMP,
-
-CONSTRAINT uq_accounts_user_name
-    UNIQUE (user_name),
 
 CONSTRAINT uq_accounts_email
     UNIQUE (email),

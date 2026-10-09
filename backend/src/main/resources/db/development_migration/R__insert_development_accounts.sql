@@ -1,7 +1,6 @@
 INSERT INTO accounts (
     first_name,
     last_name,
-    user_name,
     email,
     role,
     phone_number,
@@ -10,7 +9,6 @@ INSERT INTO accounts (
 VALUES (
            'Admin',
            'Admin',
-           'admin.admin',
            'admin@example.com',
            'admin',
            '+385911111111',
@@ -27,7 +25,7 @@ INSERT INTO addresses (
     country_code
 )
 VALUES (
-           (SELECT id FROM accounts WHERE user_name = 'admin.admin'),
+           (SELECT id FROM accounts WHERE email = 'admin@example.com'),
            'Admin Admin',
            'Ilica 120',
            '10000',
@@ -54,7 +52,7 @@ INSERT INTO auctions (
     status
 )
 VALUES (
-           (SELECT id FROM accounts WHERE user_name = 'admin.admin'),
+           (SELECT id FROM accounts WHERE email = 'admin@example.com'),
            'Classic Cars Auction',
            'Auction of classic and collectible vehicles.',
            '2026-10-15 10:00:00',
@@ -89,7 +87,7 @@ INSERT INTO bids (
     amount
 )
 VALUES (
-           (SELECT id FROM accounts WHERE user_name = 'admin.admin'),
+           (SELECT id FROM accounts WHERE email = 'admin@example.com'),
            (
                SELECT l.id
                FROM lots l
