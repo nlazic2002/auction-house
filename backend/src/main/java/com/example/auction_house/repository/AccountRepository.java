@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface AccountRepository {
 
-    Optional<Account> findById(long id);
+    Optional<Account> findById(final long id);
 
-    Optional<Account> findByEmail(String email);
+    Optional<Account> findByEmail(final String email);
 }

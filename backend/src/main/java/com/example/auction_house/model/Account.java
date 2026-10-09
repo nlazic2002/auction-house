@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Account implements UserDetails, CredentialsContainer {
 
-    private Long id;
+    private long id;
     private String firstName;
     private String lastName;
     private String email;
@@ -34,7 +34,7 @@ public class Account implements UserDetails, CredentialsContainer {
     }
 
     public Account(
-            Long id,
+            long id,
             String firstName,
             String lastName,
             String email,
@@ -65,11 +65,11 @@ public class Account implements UserDetails, CredentialsContainer {
         this.anonymizedAt = anonymizedAt;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
